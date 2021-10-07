@@ -1,10 +1,10 @@
 import React from 'react'
+import Setup from './Setup'
 
 const FormSuccess = () => {
     return (
-        <div className='form-content-right'>
-            <h1 className='form-success'>We have recived your request!</h1>
-            
+        <div>
+            <Setup/>
         </div>
     );
 };
