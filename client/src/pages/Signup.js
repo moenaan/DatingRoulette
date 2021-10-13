@@ -44,9 +44,9 @@ const Signup = () => {
 
   return (
     <form onSubmit={handleFormSubmit} className="login-form">
-    <div className='new'>
+    {/* <div className='new'>
       <img src='public/img1.jpg'/> 
-    </div> 
+    </div>  */}
 
 <FormGroup>
     <Label></Label>

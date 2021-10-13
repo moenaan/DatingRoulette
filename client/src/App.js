@@ -7,6 +7,8 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Jumbotron } from 'reactstrap';
 
 import Home from './pages/Home';
 import Profile from './pages/Profile';
@@ -38,31 +40,35 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <ApolloProvider client={client}>
-      <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
-          <Header />
-          <div className="container">
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route exact path="/login">
-              <Login />
-            </Route>
-            <Route exact path="/signup">
-              <Signup />
-            </Route>
-            <Route exact path="/me">
-              <Profile />
-            </Route>
-            <Route exact path="/profiles/:profileId">
-              <Profile />
-            </Route>
-          </div>
-          <Footer />
-        </div>
-      </Router>
-    </ApolloProvider>
+    <div className="App">
+      <Jumbotron>
+        <ApolloProvider client={client}>
+          <Router>
+            <div className="flex-column justify-flex-start min-100-vh">
+              <Header />
+              <div className="container">
+                  <Route exact path="/">
+                    <Home />
+                  </Route>
+                  <Route exact path="/login">
+                    <Login />
+                  </Route>
+                  <Route exact path="/signup">
+                    <Signup />
+                  </Route>
+                  <Route exact path="/me">
+                    <Profile />
+                  </Route>
+                  <Route exact path="/profiles/:profileId">
+                    <Profile />
+                  </Route>
+              </div>
+              <Footer />
+            </div>
+          </Router>
+        </ApolloProvider> 
+      </Jumbotron>
+    </div>
   );
 }
 
