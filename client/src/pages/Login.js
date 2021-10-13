@@ -1,3 +1,4 @@
+ //import firebase from'./firebase';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
@@ -8,6 +9,11 @@ import { GoogleLoginButton } from 'react-social-login-buttons';
 import { FormGroup, Label } from 'reactstrap';
 
 import Auth from '../utils/auth';
+
+
+//import socialMediaAuth from '../service/auth';
+//import { facebookProvider } from '../config/authMethod';
+//import { googleProvider } from '../config/authMethod';
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -44,6 +50,11 @@ const Login = (props) => {
     });
   };
 
+  //  const handleOnClick = async (provider) => {
+  //   const res = await socialMediaAuth(provider);
+  //     console.log(res);
+  //   };
+
   return (
     <main className="login-form">
       
@@ -53,7 +64,7 @@ const Login = (props) => {
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
-              <form onSubmit={handleFormSubmit} className>
+            <form onSubmit={handleFormSubmit} className>
               <FormGroup>
                 <Label></Label>
                 <input
@@ -78,9 +89,9 @@ const Login = (props) => {
                 /> 
                 </FormGroup>
                 <button className="w-100 btn btn-lg btn-dark mt-3" type="submit">Login</button>
-                <FacebookLoginButton className="mt-3 mb-3"/>
-                <GoogleLoginButton className="mt-3 mb-3"/>
-              </form>
+                  <FacebookLoginButton className="mt-3 mb-3"/> 
+                  <GoogleLoginButton className="mt-3 mb-3"/>  
+            </form>
             )}
 
             {error && (

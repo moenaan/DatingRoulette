@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FormGroup, Label } from 'reactstrap';
-import { FacebookLoginButton } from 'react-social-login-buttons';
+
 
 
 import { useMutation } from '@apollo/client';
@@ -44,9 +44,6 @@ const Signup = () => {
 
   return (
     <form onSubmit={handleFormSubmit} className="login-form">
-    <div className='new'>
-      <img src='public/img1.jpg'/> 
-    </div> 
 
 <FormGroup>
     <Label></Label>
@@ -86,13 +83,13 @@ const Signup = () => {
 
     <button className="w-100 btn btn-lg btn-dark mt-3" type="submit">Sign Up</button> 
     
-    <FacebookLoginButton className="mt-3 mb-3"/>
+    
 
-    <div className="text-center">
+    {/* <div className="text-center">
         Already have an account Login  <a href='<Home/>'>here</a>
         <span className="p-2">|</span>
     <a href="/forgot-password">Forgot Password</a>
-    </div>
+    </div> */}
 
     {error && (
           <div className="my-3 p-3 bg-danger text-white">
