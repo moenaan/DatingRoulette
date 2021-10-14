@@ -6,7 +6,7 @@
   height: 100%;
 }  
 
-.jumbotron {
+ /* .jumbotron {
   background-image: url(./img/date-night.png);
   background-repeat: no-repeat, repeat;
   background-position: center;
@@ -15,12 +15,12 @@
   width: 100%;
   padding-top: 25px;
   font-weight: bold;
-  /* margin-top: 100px; */
-  padding: 100px;
-  border-radius: 50px;
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-}
-
+  margin-top: 100px; 
+  padding: 100px; 
+  border-radius: 50px; 
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); 
+ } */
+ 
 /* body {
 min-height: 75rem;
 }

@@ -1,6 +1,11 @@
+
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
+const cors = require ('cors');
+require('dotenv').config();
+
+// import postRoutes from '../routes/posts'
 
 const { typeDefs, resolvers } = require('./schemas');
 // Import `authMiddleware()` function to be configured with the Apollo Server
@@ -9,6 +14,8 @@ const db = require('./config/connection');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
+
+// app.use('/post', postRoutes);
 
 const server = new ApolloServer({
   typeDefs,
@@ -19,8 +26,9 @@ const server = new ApolloServer({
 
 server.applyMiddleware({ app });
 
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ limit: "30mb", extended: false }));
 app.use(express.json());
+app.use(cors());
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
