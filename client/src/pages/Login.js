@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
-import { FacebookLoginButton } from 'react-social-login-buttons';
-import { GoogleLoginButton } from 'react-social-login-buttons';
+// import { FacebookLoginButton } from 'react-social-login-buttons';
+// import { GoogleLoginButton } from 'react-social-login-buttons';
 
 import { FormGroup, Label } from 'reactstrap';
 
@@ -78,8 +78,8 @@ const Login = (props) => {
                 /> 
                 </FormGroup>
                 <button className="w-100 btn btn-lg btn-dark mt-3" type="submit">Login</button>
-                <FacebookLoginButton className="mt-3 mb-3"/>
-                <GoogleLoginButton className="mt-3 mb-3"/>
+                {/* <FacebookLoginButton className="mt-3 mb-3"/>
+                <GoogleLoginButton className="mt-3 mb-3"/> */}
               </form>
             )}
 

@@ -86,7 +86,7 @@ const Signup = () => {
 
     <button className="w-100 btn btn-lg btn-dark mt-3" type="submit">Sign Up</button> 
     
-    <FacebookLoginButton className="mt-3 mb-3"/>
+    {/* <FacebookLoginButton className="mt-3 mb-3"/> */}
 
     <div className="text-center">
         Already have an account Login  <a href='<Home/>'>here</a>
