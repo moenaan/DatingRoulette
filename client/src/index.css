@@ -19,8 +19,9 @@ footer {
   top: 90%;
   position: fixed;
 }
-/* body {
-  background-image: url(./img/date-night.png);
+body {
+  font-family: cursive;
+  /* background-image: url(./img/Rose.png);
   background-repeat: no-repeat, repeat;
   background-position: center;
   background-size: auto;
@@ -31,8 +32,8 @@ footer {
   margin-top: 100px;
   padding: 100px;
   border-radius: 50px;
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-} */
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); */
+}
 
 /* Add a black background color to the top navigation */
 .navbar {
@@ -307,3 +308,27 @@ button:hover::after {
   border-radius: 50%;
 }
 /* container and home button setup ends */
+
+/* date display */
+.date-display {
+  height: 300px;
+  border-radius: 50%;
+  border-color: white;
+}
+
+.form-input {
+  height: 200px;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 2px solid red;
+  border-style: hidden;
+  border-radius: 4px;
+  font-size: xxx-large;
+  font-family: 'Cedarville Cursive', cursive;
+  word-break: break-word;
+  overflow: ellipsis;
+  width: fit-content;
+}
+
+/* date display ends */
+

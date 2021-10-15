@@ -12,13 +12,13 @@ const Header = () => {
     <nav class="navbar">
   <div class="container-fluid">
     <Link className="home-button" to="/" href="#"><h1>Dating❤️Roulette</h1></Link>
-    <Link className="btn onClick={logout}">
+    <button className="btn onClick={logout}">
       <span class="navbar-toggler-icon"></span>
-    </Link>
+    </button>
     <div class="collapse navbar-collapse navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" id="navbarNavDropdown">
       <ul class="navbar-nav float-right" >
         <li class="nav-item">
-          <Link class="nav-link active" to="/me" aria-current="page" href="#">Leaderboard</Link>
+          <Link class="nav-link active" to="/me" aria-current="page" href="#">friends</Link>
         </li>
         <li class="nav-item">
           <Link className="nav-link active" to="/login" aria-current="page" href="#">Log In</Link>
@@ -26,9 +26,9 @@ const Header = () => {
         <li class="nav-item">
           <Link className="nav-link active" to="/signup" aria-current="page" href="#">Sign Up</Link>
         </li>
-        {/* <li class="nav-item">
-          <link className="btn onClick={logout}">Log Out</link>
-        </li> */}
+        <li class="nav-item">
+          {/* <link className="btn onClick={logout}">Log Out</link> */}
+        </li>
       </ul>
     </div>
   </div>

@@ -75,7 +75,7 @@ words[24] = "Painting at a lake"
 words[25] = "Fishing"
 words[26] = "Kayaking"
 words[27] = "Canoeing"
-words[28] = "Make some popcorn, get some snacks, make a fort and watch a movie together"
+words[28] = "Get snacks, make a fort and watch a movie together"
 words[29] = "Camping in the backyard"
 words[30] = "Game night"
 words[31] = "Camping in the woods"
@@ -92,7 +92,7 @@ words[41] = "Cook a complicated meal together"
 words[42] = "Play video games together"
 words[43] = "Go to a bar and pretend like you don’t know each other"
 words[44] = "Go wine tasting"
-words[45] = "Both of you create an alias with an accent and go about day without breaking character"
+words[45] = "Create an alias with an accent and go about day without breaking character"
 words[46] = "Climb a tree together"
 words[47] = "Play hide and seek in the dark"
 words[48] = "Try a new position from Kamasutra"
@@ -180,10 +180,9 @@ function PickRandomWord() {
 
 return (
   <div>
-    <h2 className="card-header">
-      {profileId ? `${profile.name}'s` : 'Your'} friends have reviewed these
-      dates...
-    </h2>
+    <h1 className="container">
+      {profileId ? `${profile.name}'s` : 'Your'} best dates start today
+    </h1>
 
     {profile.skills?.length > 0 && (
       <SkillsList
@@ -192,7 +191,7 @@ return (
       />
     )}
 
-    <div className="my-4 p-4" style={{ border: '1px dotted #1a1a1a' }}>
+    <div className="my-4 p-4">
       <SkillForm randomWord={randomWord} pickRandomWord={PickRandomWord} profileId={profile._id} />
     </div>
   </div>
