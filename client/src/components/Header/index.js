@@ -12,7 +12,7 @@ const Header = () => {
     <nav class="navbar">
   <div class="container-fluid">
     <Link className="home-button" to="/" href="#"><h1>Dating❤️Roulette</h1></Link>
-    <button className="btn onClick={logout}">
+    <button className= "btn" onClick={logout}>
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" id="navbarNavDropdown">
