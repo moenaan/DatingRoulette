@@ -5,6 +5,7 @@ import { useMutation } from '@apollo/client';
 import { ADD_SKILL } from '../../utils/mutations';
 
 import Auth from '../../utils/auth';
+import { Container } from 'reactstrap';
 
 const SkillForm = ({ profileId, pickRandomWord, randomWord}) => {
   const [skill, setSkill] = useState('');
@@ -26,15 +27,15 @@ const SkillForm = ({ profileId, pickRandomWord, randomWord}) => {
   };
 
   return (
-    <div>
-      <h4>Generate your date below.</h4>
+    <div className="container">
+      <h4>What will you choose today?...</h4>
 
       {Auth.loggedIn() ? (
         <form
           className="flex-row justify-center justify-space-between-md align-center"
           onSubmit={handleFormSubmit}
         >
-          <div className="col-12 col-lg-9">
+          <div className="date-display col-12 col-lg-10">
             <input
               placeholder="Generate now..."
               value={randomWord}
@@ -44,8 +45,8 @@ const SkillForm = ({ profileId, pickRandomWord, randomWord}) => {
           </div>
 
           <div className="col-12 col-lg-3">
-            <button className="btn btn-info btn-block py-2" type="button" onClick={() => pickRandomWord()}>
-              Generate your date
+            <button className="generate-button" type="button" onClick={() => pickRandomWord()}>
+              GENERATE DATE
             </button>
           </div>
 
@@ -61,8 +62,10 @@ const SkillForm = ({ profileId, pickRandomWord, randomWord}) => {
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}
+    
     </div>
   );
 };
 
 export default SkillForm;
+

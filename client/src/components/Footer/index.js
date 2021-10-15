@@ -15,7 +15,7 @@ const Footer = () => {
             &larr; Go Back
           </button>
         )}
-        <h4>&copy; {new Date().getFullYear()} - Roulette Dating</h4>
+        <h6>&copy; {new Date().getFullYear()} - Dating Roulette </h6>
       </div>
     </footer>
   );
