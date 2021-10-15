@@ -48,7 +48,7 @@ function App() {
               <Header />
               <div className="container">
                   <Route exact path="/">
-                    <Home />
+                    <Profile />
                   </Route>
                   <Route exact path="/login">
                     <Login />
@@ -57,7 +57,7 @@ function App() {
                     <Signup />
                   </Route>
                   <Route exact path="/me">
-                    <Profile />
+                    <Home />
                   </Route>
                   <Route exact path="/profiles/:profileId">
                     <Profile />

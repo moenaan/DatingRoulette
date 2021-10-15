@@ -5,8 +5,9 @@ import { useMutation } from '@apollo/client';
 import { ADD_SKILL } from '../../utils/mutations';
 
 import Auth from '../../utils/auth';
+import { Container } from 'reactstrap';
 
-const SkillForm = ({ profileId }) => {
+const SkillForm = ({ profileId, pickRandomWord, randomWord}) => {
   const [skill, setSkill] = useState('');
 
   const [addSkill, { error }] = useMutation(ADD_SKILL);
@@ -26,28 +27,29 @@ const SkillForm = ({ profileId }) => {
   };
 
   return (
-    <div>
-      <h4>Endorse some more skills below.</h4>
+    <div className="container">
+      <h4>What will you choose today?...</h4>
 
       {Auth.loggedIn() ? (
         <form
           className="flex-row justify-center justify-space-between-md align-center"
           onSubmit={handleFormSubmit}
         >
-          <div className="col-12 col-lg-9">
+          <div className="date-display col-12 col-lg-10">
             <input
-              placeholder="Endorse some skills..."
-              value={skill}
+              placeholder="Generate now..."
+              value={randomWord}
               className="form-input w-100"
-              onChange={(event) => setSkill(event.target.value)}
+              
             />
           </div>
 
           <div className="col-12 col-lg-3">
-            <button className="btn btn-info btn-block py-3" type="submit">
-              Endorse Skill
+            <button className="generate-button" type="button" onClick={() => pickRandomWord()}>
+              GENERATE DATE
             </button>
           </div>
+
           {error && (
             <div className="col-12 my-3 bg-danger text-white p-3">
               {error.message}
@@ -56,12 +58,14 @@ const SkillForm = ({ profileId }) => {
         </form>
       ) : (
         <p>
-          You need to be logged in to endorse skills. Please{' '}
+          You need to be logged in to generate a date. Please{' '}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}
+    
     </div>
   );
 };
 
 export default SkillForm;
+

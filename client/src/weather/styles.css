@@ -8,7 +8,7 @@
 body {
   font-size: 16px;
   font-family: Verdana, Geneva, Tahoma, sans-serif; 
-  background-image: url("./client/public/img1.jpg");
+  background-image: url("../img1.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 120em 80em;   
