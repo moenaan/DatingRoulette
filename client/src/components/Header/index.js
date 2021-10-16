@@ -9,39 +9,22 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <header className="bg-info text-dark mb-4 py-3 display-flex align-center">
-      <div className="container flex-column justify-space-between-lg justify-center align-center text-center">
-        <Link className="text-dark" to="/">
-          <h1 className="m-0" style={{ fontSize: '3rem' }}>
-            Roulette Dating
-          </h1>
-        </Link>
-        <p className="m-0" style={{ fontSize: '1.75rem', fontWeight: '700' }}>
-          Welcome
-        </p>
-        <div>
-          {Auth.loggedIn() ? (
-            <>
-              <Link className="btn btn-lg btn-primary m-2" to="/me">
-                View My Profile
-              </Link>
-              <button className="btn btn-lg btn-light m-2" onClick={logout}>
-                Logout
-              </button>
-            </>
-          ) : (
-            <>
-              <Link className="btn btn-lg btn-primary m-2" to="/login">
-                Login
-              </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/signup">
-                Signup
-              </Link>
-            </>
-          )}
-        </div>
-      </div>
-    </header>
+    // navbar starts
+    <div class="container-fluid m-0 p-0 mt-0 ms-1">
+    <container-fluid mt-0>      
+    <div class="topnav">
+  <Link class="home-button" to="/" href="#"><h1>Dating❤️Roulette</h1></Link>
+  <Link class="profile" to="/me" aria-current="page" href="#">profile</Link>
+  <Link class="login-button" to="/login" aria-current="page" href="#">Log In</Link>
+  <Link class="signup-button" to="/signup" aria-current="page" href="#">Sign Up</Link>
+ <button class="logout-button" onClick={logout}><h1>Log Out</h1></button>
+  </div>
+
+
+</container-fluid>
+</div>
+// navbar ends 
+
   );
 };
 

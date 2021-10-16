@@ -2,10 +2,7 @@
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
-const cors = require ('cors');
-require('dotenv').config();
-
-// import postRoutes from '../routes/posts'
+require ("dotenv").config();
 
 const { typeDefs, resolvers } = require('./schemas');
 // Import `authMiddleware()` function to be configured with the Apollo Server

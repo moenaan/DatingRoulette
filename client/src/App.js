@@ -41,14 +41,13 @@ const client = new ApolloClient({
 function App() {
   return (
     <div className="App">
-      <Jumbotron>
         <ApolloProvider client={client}>
           <Router>
             <div className="flex-column justify-flex-start min-100-vh">
               <Header />
               <div className="container">
                   <Route exact path="/">
-                    <Home />
+                    <Profile />
                   </Route>
                   <Route exact path="/login">
                     <Login />
@@ -57,7 +56,7 @@ function App() {
                     <Signup />
                   </Route>
                   <Route exact path="/me">
-                    <Profile />
+                    <Home />
                   </Route>
                   <Route exact path="/profiles/:profileId">
                     <Profile />
@@ -67,7 +66,6 @@ function App() {
             </div>
           </Router>
         </ApolloProvider> 
-      </Jumbotron>
     </div>
   );
 }

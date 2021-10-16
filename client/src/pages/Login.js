@@ -3,18 +3,15 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
-import { FacebookLoginButton } from 'react-social-login-buttons';
-import { GoogleLoginButton } from 'react-social-login-buttons';
+// import { FacebookLoginButton } from 'react-social-login-buttons';
+// import { GoogleLoginButton } from 'react-social-login-buttons';
 
 import { FormGroup, Label } from 'reactstrap';
 
 import Auth from '../utils/auth';
+//sign up page
 
-
-//import socialMediaAuth from '../service/auth';
-//import { facebookProvider } from '../config/authMethod';
-//import { googleProvider } from '../config/authMethod';
-
+// sign up ends
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
@@ -89,9 +86,14 @@ const Login = (props) => {
                 /> 
                 </FormGroup>
                 <button className="w-100 btn btn-lg btn-dark mt-3" type="submit">Login</button>
-                  <FacebookLoginButton className="mt-3 mb-3"/> 
-                  <GoogleLoginButton className="mt-3 mb-3"/>  
-            </form>
+                {/* <FacebookLoginButton className="mt-3 mb-3"/>
+                <GoogleLoginButton className="mt-3 mb-3"/> */}<br></br>
+                <div className="text-center">
+                Dont have an account? signup  <Link href="/signup">here</Link>
+                <span className="p-2">|</span>
+                <a href="/forgot-password">Forgot Password</a>
+              </div>
+              </form>
             )}
 
             {error && (
