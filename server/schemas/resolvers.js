@@ -31,7 +31,7 @@ const resolvers = {
       const profile = await Profile.findOne({ email });
 
       if (!profile) {
-        throw new AuthenticationError('No profile with this email found!');
+        throw new AuthenticationError('No profile with this email found! Please sign up');
       }
 
       const correctPw = await profile.isCorrectPassword(password);

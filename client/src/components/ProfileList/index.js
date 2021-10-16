@@ -27,7 +27,7 @@ const ProfileList = ({ profiles, title }) => {
                   className="btn btn-block btn-squared btn-light text-dark"
                   to={`/profiles/${profile._id}`}
                 >
-                  Show saved dates.
+                  Pick a date for them.
                 </Link>
               </div>
             </div>
