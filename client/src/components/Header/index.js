@@ -17,7 +17,7 @@ const Header = () => {
   <Link class="profile" to="/me" aria-current="page" href="#">profile</Link>
   <Link class="login-button" to="/login" aria-current="page" href="#">Log In</Link>
   <Link class="signup-button" to="/signup" aria-current="page" href="#">Sign Up</Link>
- <button class="logout-button" onClick={logout}><h1>Log Out</h1></button>
+  <Link class="logout-button" onClick={logout}><h1>Log Out</h1></Link>
   </div>
 
 
