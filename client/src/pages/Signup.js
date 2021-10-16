@@ -7,6 +7,7 @@ import { useMutation } from '@apollo/client';
 import { ADD_PROFILE } from '../utils/mutations';
 
 import Auth from '../utils/auth';
+import { Link } from 'react-router-dom';
 
 const Signup = () => {
   const [formState, setFormState] = useState({
@@ -89,7 +90,7 @@ const Signup = () => {
     {/* <FacebookLoginButton className="mt-3 mb-3"/> */}
 
     <div className="text-center">
-        Already have an account Login  <a href='<Home/>'>here</a>
+        Already have an account Login  <Link href="/login">here</Link>
         <span className="p-2">|</span>
     <a href="/forgot-password">Forgot Password</a>
     </div>

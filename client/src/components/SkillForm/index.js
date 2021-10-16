@@ -5,7 +5,6 @@ import { useMutation } from '@apollo/client';
 import { ADD_SKILL } from '../../utils/mutations';
 
 import Auth from '../../utils/auth';
-import { Container } from 'reactstrap';
 
 const SkillForm = ({ profileId, pickRandomWord, randomWord}) => {
   const [skill, setSkill] = useState('');
@@ -28,7 +27,7 @@ const SkillForm = ({ profileId, pickRandomWord, randomWord}) => {
 
   return (
     <div className="container">
-      <h4>What will you choose today?...</h4>
+      <h4>What will you choose?...</h4>
 
       {Auth.loggedIn() ? (
         <form

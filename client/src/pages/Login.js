@@ -8,7 +8,9 @@ import { LOGIN_USER } from '../utils/mutations';
 import { FormGroup, Label } from 'reactstrap';
 
 import Auth from '../utils/auth';
+//sign up page
 
+// sign up ends
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
@@ -79,7 +81,12 @@ const Login = (props) => {
                 </FormGroup>
                 <button className="w-100 btn btn-lg btn-dark mt-3" type="submit">Login</button>
                 {/* <FacebookLoginButton className="mt-3 mb-3"/>
-                <GoogleLoginButton className="mt-3 mb-3"/> */}
+                <GoogleLoginButton className="mt-3 mb-3"/> */}<br></br>
+                <div className="text-center">
+                Dont have an account? signup  <Link href="/signup">here</Link>
+                <span className="p-2">|</span>
+                <a href="/forgot-password">Forgot Password</a>
+              </div>
               </form>
             )}
 

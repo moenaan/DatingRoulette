@@ -41,7 +41,6 @@ const client = new ApolloClient({
 function App() {
   return (
     <div className="App">
-      <Jumbotron>
         <ApolloProvider client={client}>
           <Router>
             <div className="flex-column justify-flex-start min-100-vh">
@@ -67,7 +66,6 @@ function App() {
             </div>
           </Router>
         </ApolloProvider> 
-      </Jumbotron>
     </div>
   );
 }
