@@ -45,21 +45,14 @@
 } */
 
 body {
-  background-image: url(./img/Skyline.png);
-  background-size: 100%;
-  background-repeat: no-repeat, repeat;
-  background-position-x: center;
-  background-position-y: 35%;
-  margin: 0!important;
-  padding: 0!important;
-}
-
-body {
   background-image: url(./img/Couple-in-love.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position-x: right;
-  background-position-y: 25%;
+  background-position-y: 170px;
+  overflow: auto;
+  margin: 0!important;
+  padding: 0!important;
 }
 
 button, button::after {
@@ -372,11 +365,13 @@ button:hover::after {
   font-size: xxx-large;
   font-family: 'Cedarville Cursive', cursive;
   word-break: break-word;
-  overflow: ellipsis;
+  overflow: auto;
   width: fit-content;
   display: flex;
   flex-wrap: wrap-reverse;
   margin-right: 400px!important; 
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 /* date display ends */
