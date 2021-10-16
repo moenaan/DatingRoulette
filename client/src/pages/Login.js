@@ -1,10 +1,9 @@
- //import firebase from'./firebase';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
-// import { FacebookLoginButton } from 'react-social-login-buttons';
-// import { GoogleLoginButton } from 'react-social-login-buttons';
+import { FacebookLoginButton } from 'react-social-login-buttons';
+import { GoogleLoginButton } from 'react-social-login-buttons';
 
 import { FormGroup, Label } from 'reactstrap';
 
@@ -47,14 +46,13 @@ const Login = (props) => {
     });
   };
 
-  //  const handleOnClick = async (provider) => {
-  //   const res = await socialMediaAuth(provider);
-  //     console.log(res);
-  //   };
-
   return (
     <main className="login-form">
-      
+      <div className="col-12 col-lg-10">
+      <div className="card">
+      <h4 className="card-header bg-dark text-light p-2">Login</h4>
+          <div className="card-body">
+
           {data ? (
               <p>
                 Success! You may now head{' '}
@@ -86,13 +84,8 @@ const Login = (props) => {
                 /> 
                 </FormGroup>
                 <button className="w-100 btn btn-lg btn-dark mt-3" type="submit">Login</button>
-                {/* <FacebookLoginButton className="mt-3 mb-3"/>
-                <GoogleLoginButton className="mt-3 mb-3"/> */}<br></br>
-                <div className="text-center">
-                Dont have an account? signup  <Link href="/signup">here</Link>
-                <span className="p-2">|</span>
-                <a href="/forgot-password">Forgot Password</a>
-              </div>
+                <FacebookLoginButton className="mt-3 mb-3"/>
+                <GoogleLoginButton className="mt-3 mb-3"/><br></br>
               </form>
             )}
 
@@ -101,9 +94,9 @@ const Login = (props) => {
                 {error.message}
               </div>
             )}
-          
-        
-      
+          </div>
+        </div>
+      </div>
     </main>
   );
 };

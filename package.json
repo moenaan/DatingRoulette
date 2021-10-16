@@ -26,5 +26,13 @@
     "react-dom": "^17.0.2",
     "react-social-login-buttons": "^3.6.0",
     "reactstrap": "^8.10.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moenaan/DatingRoulette.git"
+  },
+  "bugs": {
+    "url": "https://github.com/moenaan/DatingRoulette/issues"
+  },
+  "homepage": "https://github.com/moenaan/DatingRoulette#readme"
 }
