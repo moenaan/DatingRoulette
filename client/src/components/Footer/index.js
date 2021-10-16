@@ -8,12 +8,12 @@ const Footer = () => {
     <footer className="w-100 mt-auto text-dark p-4">
       <div className="container text-center mb-5">
         {location.pathname !== '/' && (
-          <button
+          <button2
             className="btn btn-dark mb-3"
             onClick={() => history.goBack()}
           >
             &larr; Go Back
-          </button>
+          </button2>
         )}
         <h6>&copy; {new Date().getFullYear()} - Dating Roulette </h6>
       </div>
