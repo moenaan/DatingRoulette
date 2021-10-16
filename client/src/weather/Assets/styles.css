@@ -2,16 +2,17 @@
 .titantron {
   background-color: rgb(156, 73, 131);
   text-align: center;
+  color: white;
   box-shadow: 0 2px 8px 0 black;
 }
 /* I set the configurations for the body by default */
 body {
   font-size: 16px;
   font-family: Verdana, Geneva, Tahoma, sans-serif; 
-  background-image: url("../img1.jpg");
+  background-image: url("../Assets/img1.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 120em 80em;   
+  background-size: 120em 90em;   
 }
 /* This is the font size for the weather dashboard titantron. */
 h3{
@@ -26,6 +27,7 @@ h3{
   border: 1px solid black;
   background-color:rgb(156, 73, 131);
   border-radius: 15px;
+  color: white;
 }
 /* This is the weather card configurations for each day in the 5-day forecast. */
 .weather-card {
@@ -40,21 +42,14 @@ h3{
   border-style: solid;
   border: 1px solid black;
   border-radius: 15px;
+  color: white;
 }
 /* This is the search-button ID configurations. */
 #button-search {
   background-color: rgb(156, 73, 131);
   border-style: none;
-}
-/* This is the clear-data button ID configurations */
-#clear-data {
-  background-color: rgb(156, 73, 131);
-  border-style: none;
-}
-/* This is the configurations for when the user hovers over a previously searched city */
-li:hover{
-  background-color: rgb(156, 73, 131);
-  text-decoration: underline;
+  color: white;
+
 }
 /* These are all the color coding classes used for the UV Index in the current weather stats. */
 .green {

@@ -12,6 +12,7 @@ const Header = () => {
     <nav class="navbar">
   <div class="container-fluid">
     <Link className="home-button" to="/" href="#"><h1>Dating❤️Roulette</h1></Link>
+    <a href='https://burkemm.github.io/Dating-Roulette-Weather/'>5-day Weather Forecast</a>
     <button className= "btn" onClick={logout}>
       <span class="navbar-toggler-icon"></span>
     </button>

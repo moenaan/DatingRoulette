@@ -8,7 +8,6 @@ var presentTemperature = $("#presentTemperature");
 var presentHumidity = $("#presentHumidity");
 var presentWindSpeed = $("#presentWindspeed");
 var searchButton = $("#button-search");
-var clearButton = $("#clear-data");
 var APIKey="f7348dc991cab9cc1ce56ef1a9789571";
 
 function presentWeather(citySearch){
@@ -62,16 +61,6 @@ function saveCitytolist(c){
     $(".list-group").append(listEl);
 }
 
-// this function shows the user the previously searched city when they click on the city again in the search history.
-function previousCityClick(event){
-    var liEl=event.target;
-    if (event.target.matches("li")){
-        var city = liEl.textContent.trim();
-        presentWeather(city);
-    }
-
-}
-
 // This function prevents the default event and takes in the city search parameters.
 function showCityWeather(event){
     event.preventDefault();
@@ -108,30 +97,6 @@ function forecast(cityid){
     });
 }
 
-// This function clears the search history when the clear data button is clicked.
-function clearData(event){
-    event.preventDefault();
-    pastCity = [];
-    localStorage.removeItem("cityname");
-    document.location.reload();
-
-}
-
-// this functions shows the previously searched city's weather forecast and current weather.
-function searchPastCity(){
-    $("ul").empty();
-    var pastCity = JSON.parse(localStorage.getItem("cityname"));
-    if(pastCity !== null){
-        pastCity=JSON.parse(localStorage.getItem("cityname"));
-        for(var i = 0; i < pastCity.length; i++){
-            saveCitytolist(pastCity[i]);
-        }
-        var city = pastCity[i - 1];
-        presentWeather(city);
-    }
-
-}
-
 // This function gets the UV Index for the current weather in a city.
     function UVIstat(ln,lt){
         // This builds the URL for getting the UV Index with the API key.
@@ -164,12 +129,9 @@ function changeUVIstatColor() {
     } 
 }
 
-// This is the click handlers that handle the search button and the clear history button.
-// It's also the click handler when a previously search city is clicked by the user.
 $(searchButton).on("click",showCityWeather);
-$(document).on("click",previousCityClick);
 $(window).on("load",searchPastCity);
-$(clearButton).on("click",clearData);
+
 
 
 
