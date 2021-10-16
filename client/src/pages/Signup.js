@@ -45,6 +45,10 @@ const Signup = () => {
 
   return (
     <form onSubmit={handleFormSubmit} className="login-form">
+      <div className="col-12 col-lg-10">
+      <div className="card">
+      <h4 className="card-header bg-dark text-light p-2">SignUp</h4>
+          <div className="card-body">
 
 <FormGroup>
     <Label></Label>
@@ -84,19 +88,14 @@ const Signup = () => {
 
     <button className="w-100 btn btn-lg btn-dark mt-3" type="submit">Sign Up</button> 
     
-    {/* <FacebookLoginButton className="mt-3 mb-3"/> */}
-
-    {/* <div className="text-center">
-        Already have an account Login  <Link href="/login">here</Link>
-        <span className="p-2">|</span>
-    <a href="/forgot-password">Forgot Password</a>
-    </div> */} 
-
     {error && (
           <div className="my-3 p-3 bg-danger text-white">
             {error.message}
           </div>
         )}
+        </div>
+        </div>
+      </div>
 </form>
     
   );
