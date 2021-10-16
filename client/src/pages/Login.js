@@ -83,7 +83,7 @@ const Login = (props) => {
                 onChange={handleChange}
                 /> 
                 </FormGroup>
-                <button className="w-100 btn btn-lg btn-dark mt-3" type="submit">Login</button>
+                <button2 className="w-100 btn btn-lg btn-dark mt-3" type="submit">Login</button2>
                 <FacebookLoginButton className="mt-3 mb-3"/>
                 <GoogleLoginButton className="mt-3 mb-3"/><br></br>
               </form>

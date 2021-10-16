@@ -43,16 +43,19 @@
   top: 90%;
   position: fixed;
 } */
-
+.container {
+  margin-top: 100px;
+}
 body {
   background-image: url(./img/Couple-in-love.png);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position-x: right;
-  background-position-y: 170px;
+  background-position-x: 1000px;
+  background-position-y: 30px;
   overflow: auto;
   margin: 0!important;
   padding: 0!important;
+  margin-top: 100px;
 }
 
 button, button::after {

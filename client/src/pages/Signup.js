@@ -86,7 +86,7 @@ const Signup = () => {
     /> 
     </FormGroup>
 
-    <button className="w-100 btn btn-lg btn-dark mt-3" type="submit">Sign Up</button> 
+    <button1 className="w-100 btn btn-lg btn-dark mt-3" type="submit">Sign Up</button1> 
     
     {error && (
           <div className="my-3 p-3 bg-danger text-white">
