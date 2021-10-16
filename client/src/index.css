@@ -147,11 +147,7 @@ body {
 
 
 
-.generate-button {
-  color: white;
-  left: 138%;
-  margin: 5%;
-}
+
 
 .login-form {
   background-image: url(./img/Couple-in-love.png);
@@ -248,6 +244,12 @@ body {
 
 /* generate button setup */
 .generate-button {
+  color: white;
+  left: 138%;
+  margin: 5%;
+}
+
+.generate-button {
   background-position-y: bottom;
   font: white;
 }
@@ -259,7 +261,7 @@ body {
   font-family: 'Bebas Neue', cursive;
   background: linear-gradient(45deg, transparent 5%, rgba(0, 0, 0, 0.904) 5%);
   border: 0;
-  color: rgb(0, 0, 0);
+  color: rgb(136, 31, 31);
   letter-spacing: 3px;
   line-height: 88px;
   box-shadow: 6px 6px 0px red;
